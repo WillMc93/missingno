@@ -393,9 +393,13 @@ def heatmap(
     ax0.xaxis.set_ticks_position('none')
     ax0.yaxis.set_ticks_position('none')
     ax0.patch.set_visible(False)
-
+    
     for text in ax0.texts:
-        t = float(text.get_text())
+        if text.get_text() != '--':
+            t = float(text.get_text())
+        else:
+            continue
+        
         if 0.95 <= t < 1:
             text.set_text('<1')
         elif -1 < t <= -0.95:
