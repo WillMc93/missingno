@@ -393,7 +393,7 @@ def heatmap(
     ax0.xaxis.set_ticks_position('none')
     ax0.yaxis.set_ticks_position('none')
     ax0.patch.set_visible(False)
-    
+
     for text in ax0.texts:
         if text.get_text() != '--':
             t = float(text.get_text())
